@@ -147,11 +147,11 @@ export default function CreatorModal({ isOpen, onClose, onSubmit, initialData }:
                                 <p className="text-xs text-gray-400">Click or Drag & Drop to Upload</p>
                             </div>
 
-                            {/* Manual Link Input (Optional) */}
+                            {/* Manual Link Input (Optional) - allow relative paths, so use text instead of url */}
                             <input
-                                type="url"
+                                type="text"
                                 className="w-full bg-black border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-[#dfff00] text-xs"
-                                placeholder="Or enter image URL..."
+                                placeholder="Or enter image URL or /uploads/filename..."
                                 value={formData.image}
                                 onChange={e => setFormData({ ...formData, image: e.target.value })}
                             />

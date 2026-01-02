@@ -23,5 +23,14 @@
     "followers": "560K",
     "platform": "Instagram",
     "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop"
+  },
+  {
+    "id": "ca6c591b-81d5-4f29-b006-d798de415c5d",
+    "name": "이강인",
+    "category": "Beauty",
+    "followers": "1.4M",
+    "platform": "TikTok",
+    "image": "/uploads/a048dd09-11f1-4e8e-abad-0e001ab2a5a9.png",
+    "link": ""
   }
 ]
