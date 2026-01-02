@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "name": "JIWON",
+    "category": "Beauty",
+    "followers": "1.3M",
+    "platform": "TikTok",
+    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop",
+    "link": "https://naver.com"
+  },
+  {
+    "id": "2",
+    "name": "JUNHYUK",
+    "category": "Gaming",
+    "followers": "890K",
+    "platform": "YouTube",
+    "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop"
+  },
+  {
+    "id": "3",
+    "name": "SEOYEON",
+    "category": "Fashion",
+    "followers": "560K",
+    "platform": "Instagram",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop"
+  }
+]

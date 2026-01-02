@@ -1,0 +1,640 @@
+@import url("https://fonts.cdnfonts.com/css/thegoodmonolith");
+
+@font-face {
+  font-family: "PPNeueMontreal";
+  src: url("https://assets.codepen.io/7558/PPNeueMontreal-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+  --spacing-base: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --color-text: #ffffff;
+  --color-text-dim: 0.6;
+  --transition-medium: 0.3s ease;
+  --font-size-base: 14px;
+}
+
+.creators-page {
+  font-family: "PPNeueMontreal", sans-serif;
+  background: #000;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.creators-page * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.creators-page .preloader-overlay {
+  background: #000;
+}
+
+/* Header and Footer (internal to gallery only) */
+.creators-page .header,
+.creators-page .footer {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  padding: 1.5rem;
+  z-index: 10000;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--spacing-base);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.creators-page .header > *,
+.creators-page .footer > * {
+  pointer-events: auto;
+}
+
+.creators-page .header {
+  top: 0;
+}
+
+.creators-page .footer {
+  bottom: 0;
+}
+
+.creators-page .nav-section {
+  grid-column: 1 / span 3;
+}
+
+.creators-page .values-section {
+  grid-column: 5 / span 2;
+}
+
+.creators-page .location-section {
+  grid-column: 7 / span 2;
+}
+
+.creators-page .contact-section {
+  grid-column: 9 / span 2;
+}
+
+.creators-page .social-section {
+  grid-column: 11 / span 2;
+  text-align: right;
+}
+
+.creators-page .coordinates-section {
+  grid-column: 1 / span 3;
+  font-family: "TheGoodMonolith", monospace;
+}
+
+.creators-page .info-section {
+  grid-column: 9 / span 4;
+  text-align: right;
+}
+
+.creators-page .logo-container {
+  margin-bottom: var(--spacing-md);
+  display: block;
+  width: 3rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.creators-page .logo-circles {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.creators-page .circle {
+  position: absolute;
+  border-radius: 50%;
+  transition: transform var(--transition-medium);
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: var(--color-text);
+  top: 50%;
+}
+
+.creators-page .circle-1 {
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+.creators-page .circle-2 {
+  left: 0.8rem;
+  transform: translate(0, -50%);
+  mix-blend-mode: exclusion;
+}
+
+.creators-page .logo-container:hover .circle-1 {
+  transform: translate(-0.5rem, -50%);
+}
+
+.creators-page .logo-container:hover .circle-2 {
+  transform: translate(0.5rem, -50%);
+}
+
+.creators-page .key-hint {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  border: 1px solid var(--color-text);
+  border-radius: 3px;
+  font-size: 12px;
+  margin: 0 3px;
+  min-width: 20px;
+  height: 20px;
+}
+
+.creators-page .footer p {
+  font-family: "TheGoodMonolith", monospace;
+}
+
+.creators-page a {
+  position: relative;
+  cursor: pointer;
+  color: var(--color-text);
+  padding: 0;
+  display: inline-block;
+  z-index: 1;
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  opacity: 1;
+  transition: color var(--transition-medium);
+  font-weight: 700;
+}
+
+.creators-page a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--color-text);
+  z-index: -1;
+  transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.creators-page a:hover::after {
+  width: 100%;
+}
+
+.creators-page a:hover {
+  color: black;
+  mix-blend-mode: difference;
+  opacity: 1;
+}
+
+.creators-page p {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+.creators-page ul {
+  list-style: none;
+}
+
+.creators-page h3 {
+  font-size: 14px;
+  margin-bottom: var(--spacing-base);
+  font-weight: 600;
+  color: #fff;
+}
+
+.creators-page .viewport {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 5;
+  opacity: 0;
+}
+
+.creators-page .canvas-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+  will-change: transform;
+  isolation: isolate;
+}
+
+.creators-page .grid-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.creators-page .grid-item {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: #000;
+  cursor: pointer;
+  will-change: transform, opacity;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+.creators-page .grid-item.out-of-view {
+  opacity: 0.1;
+}
+
+.creators-page .grid-item.selected {
+  z-index: 2 !important;
+}
+
+.creators-page .grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+
+.creators-page .split-screen-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  z-index: 40;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.creators-page .split-screen-container.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.creators-page .split-left,
+.creators-page .split-right {
+  position: relative;
+  width: 50vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.creators-page .zoom-target {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.creators-page .image-title-overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  transform: none;
+  color: white;
+  z-index: 60;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.creators-page .image-title-overlay.active {
+  opacity: 1;
+}
+
+.creators-page .image-slide-number {
+  position: relative;
+  width: 400px;
+  height: 20px;
+  margin-bottom: 0.5em;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  overflow: hidden;
+}
+
+.creators-page .image-slide-number span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  font-family: "TheGoodMonolith", monospace;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  transform: translateY(0px);
+  will-change: transform;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.creators-page .image-slide-title {
+  position: relative;
+  width: 400px;
+  height: 60px;
+  margin-bottom: 1em;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  overflow: hidden;
+}
+
+.creators-page .image-slide-title h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  font-family: "PPNeueMontreal", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  transform: translateY(0px);
+  will-change: transform;
+  margin: 0;
+  padding: 0;
+}
+
+.creators-page .image-slide-description {
+  position: relative;
+  width: 400px;
+  min-height: 80px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  overflow: hidden;
+}
+
+.creators-page .description-line {
+  position: relative;
+  display: block;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "PPNeueMontreal", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  transform: translateY(0px);
+  will-change: transform;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.creators-page .image-slide-follow {
+  margin-top: 0.75rem;
+  font-family: "PPNeueMontreal", sans-serif;
+  font-size: 14px;
+}
+
+.creators-page .image-slide-follow a {
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .creators-page .image-title-overlay {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .creators-page .image-slide-number {
+    width: 300px;
+    height: 18px;
+  }
+
+  .creators-page .image-slide-number span {
+    font-size: 10px;
+  }
+
+  .creators-page .image-slide-title {
+    width: 300px;
+    height: 50px;
+  }
+
+  .creators-page .image-slide-title h1 {
+    font-size: 36px;
+  }
+
+  .creators-page .image-slide-description {
+    width: 300px;
+    min-height: 70px;
+  }
+
+  .creators-page .description-line {
+    font-size: 14px;
+  }
+}
+
+.creators-page .controls-container {
+  position: fixed;
+  bottom: 1.25em;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  z-index: 55;
+  opacity: 0;
+  transition: left 1.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.creators-page .controls-container.visible {
+  opacity: 1;
+}
+
+.creators-page .controls-container.split-mode {
+  left: 75%;
+}
+
+.creators-page .percentage-indicator {
+  background-color: #f0f0f0;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.015) 1px, transparent 0);
+  background-size: 0.44em 0.44em;
+  background-position: -0.06em -0.06em;
+  padding: 0.625em 1.25em;
+  border-radius: 0.25em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "TheGoodMonolith", monospace;
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #333;
+  min-width: 5em;
+  white-space: nowrap;
+}
+
+.creators-page .switch {
+  display: flex;
+  gap: 1.25em;
+  background-color: #222;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 0);
+  background-size: 0.44em 0.44em;
+  background-position: -0.06em -0.06em;
+  padding: 0.625em 1.25em;
+  border-radius: 0.25em;
+  transition: padding 0.3s ease-in-out;
+}
+
+.creators-page .sound-toggle {
+  background-color: #f0f0f0;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.015) 1px, transparent 0);
+  background-size: 0.44em 0.44em;
+  background-position: -0.06em -0.06em;
+  padding: 0.5em 0.75em;
+  border-radius: 0.25em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 3.75em;
+  position: relative;
+  border-color: transparent;
+}
+
+.creators-page .sound-wave-canvas {
+  width: 2em;
+  height: 1em;
+  border: none !important;
+  outline: none !important;
+  background: none !important;
+}
+
+.creators-page .sound-toggle.active .sound-wave-canvas {
+  opacity: 1;
+}
+
+.creators-page .sound-toggle:hover .sound-wave-canvas {
+  opacity: 0.8;
+}
+
+.creators-page .switch-button {
+  background: none;
+  border: none;
+  border-color: transparent;
+  color: #666;
+  cursor: pointer;
+  font-family: "TheGoodMonolith", monospace;
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+}
+
+.creators-page .switch-button-current {
+  color: #f0f0f0;
+}
+
+.creators-page .indicator-dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -8px;
+}
+
+.creators-page .switch-button:hover .indicator-dot {
+  opacity: 1;
+}
+
+.creators-page .close-button {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  width: 64px;
+  height: 64px;
+  background: none;
+  border: none;
+  border-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 65;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(40px, -50%);
+}
+
+.creators-page .close-button.active {
+  pointer-events: all;
+}
+
+.creators-page .close-button:hover {
+  opacity: 0.7;
+}
+
+.creators-page .close-button svg {
+  width: 64px;
+  height: 64px;
+  transform: rotate(180deg);
+}
+
+.creators-page .scaling-image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  pointer-events: none;
+  will-change: transform;
+  opacity: 1 !important;
+}
+
+.creators-page .scaling-image-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.creators-page .page-vignette-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.creators-page .page-vignette-extreme {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.5) 20%,
+    transparent 40%
+  );
+}
+
+
