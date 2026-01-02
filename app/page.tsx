@@ -257,7 +257,7 @@ export default function Home() {
       */}
       <section className="py-20 relative bg-black overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
               { label: "Creators", value: 50, suffix: "+", emoji: "👥", realtime: false },
               // 뷰는 훨씬 더 빠르게: 큰 step + 짧은 interval

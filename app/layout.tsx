@@ -55,7 +55,8 @@ export default function RootLayout({
         <ShowreelProvider>
           <NoiseOverlay />
           <Preloader />
-          <FluidCursor />
+          {/* Fluid cursor removed for simpler default mouse cursor */}
+          {/* <FluidCursor /> */}
           <CommandPalette />
           <ShowreelModal />
           <SmoothScroll>

@@ -80,10 +80,10 @@ const Navigation = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <Link href="/" className="group flex items-center gap-2">
-              <span className="text-2xl font-black tracking-tighter text-white group-hover:text-[#dfff00] transition-colors">
+              <span className="text-2xl font-black tracking-tighter text-white transition-colors">
                 IOV
               </span>
-              <div className="h-1.5 w-1.5 rounded-full bg-[#dfff00]" />
+              <div className="h-1.5 w-1.5 rounded-full bg-white" />
             </Link>
 
             {/* Desktop Navigation */}
@@ -95,14 +95,14 @@ const Navigation = () => {
                     className="text-sm font-medium text-gray-300 hover:text-white transition-colors relative group cursor-hover px-2 py-1"
                   >
                     {item.name}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#dfff00] transition-all duration-300 group-hover:w-full" />
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
                   </Link>
                 </MagneticWrapper>
               ))}
               <MagneticWrapper>
                 <Link
                   href="/contact"
-                  className="px-5 py-2 text-sm font-bold text-black bg-white rounded-full hover:bg-[#dfff00] transition-colors duration-300 cursor-hover"
+                  className="px-5 py-2 text-sm font-bold text-black bg-white rounded-full hover:bg-gray-100 transition-colors duration-300 cursor-hover"
                 >
                   Let's Talk
                 </Link>
@@ -151,7 +151,7 @@ const Navigation = () => {
                   >
                     <Link
                       href={item.href}
-                      className="text-4xl font-bold text-white/80 hover:text-[#dfff00] transition-colors"
+                      className="text-4xl font-bold text-white/80 hover:text-white transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
@@ -165,7 +165,7 @@ const Navigation = () => {
                 <p className="text-xl font-medium text-white mb-6">contact@iov.kr</p>
                 <Link
                   href="/contact"
-                  className="block w-full py-4 text-center font-bold text-black bg-[#dfff00] rounded-xl hover:bg-white transition-colors"
+                  className="block w-full py-4 text-center font-bold text-black bg-white rounded-xl hover:bg-gray-100 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   Start Project

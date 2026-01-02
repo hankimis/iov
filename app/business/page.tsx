@@ -54,16 +54,13 @@ export default function Business() {
     let destroyed = false;
     let clickHandler: ((e: MouseEvent) => void) | null = null;
 
+    // 흑백 톤만 사용하도록 그레이스케일 컬러 생성
     function randomColors(count: number) {
-      return new Array(count)
-        .fill(0)
-        .map(
-          () =>
-            '#' +
-            Math.floor(Math.random() * 16777215)
-              .toString(16)
-              .padStart(6, '0'),
-        );
+      return new Array(count).fill(0).map(() => {
+        const v = Math.floor(Math.random() * 256);
+        const hex = v.toString(16).padStart(2, '0');
+        return `#${hex}${hex}${hex}`;
+      });
     }
 
     (async () => {
@@ -76,10 +73,10 @@ export default function Business() {
 
         app = TubesCursor(canvasRef.current, {
           tubes: {
-            colors: ['#f967fb', '#53bc28', '#6958d5'],
+            colors: ['#ffffff', '#cfcfcf', '#8a8a8a'],
             lights: {
               intensity: 200,
-              colors: ['#83f36e', '#fe8a2e', '#ff008a', '#60aed5'],
+              colors: ['#ffffff', '#e5e5e5', '#b0b0b0', '#707070'],
             },
           },
         });
@@ -130,7 +127,7 @@ export default function Business() {
             animate={{ opacity: 1, y: 0 }}
             className="text-6xl md:text-8xl font-black tracking-tighter mb-8"
           >
-            OUR <span className="text-[#dfff00]">WORK</span>
+            OUR WORK
           </motion.h1>
           <p className="text-xl md:text-2xl text-gray-200 max-w-2xl border-l border-white/20 pl-6 mx-auto">
             IOV is an all-in-one solution for Creators and Brands. <br />
@@ -147,7 +144,7 @@ export default function Business() {
               {/* Top Info */}
               <div className="flex flex-col md:flex-row justify-between items-start mb-10 border-t border-white/20 pt-8">
                 <div className="flex items-center gap-4 mb-4 md:mb-0">
-                  <span className="font-mono text-[#dfff00] text-sm">0{idx + 1}</span>
+                  <span className="font-mono text-gray-400 text-sm">0{idx + 1}</span>
                   <span className="text-xl font-bold tracking-widest">{service.category}</span>
                 </div>
                 <div className="md:text-right">
@@ -164,7 +161,7 @@ export default function Business() {
               {/* Content Grid */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="order-2 lg:order-1">
-                  <h2 className="text-4xl md:text-6xl font-bold mb-4 group-hover:text-[#dfff00] transition-colors leading-[0.95]">
+                  <h2 className="text-4xl md:text-6xl font-bold mb-4 transition-colors leading-[0.95]">
                     {service.title}
                   </h2>
                   <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6 max-w-xl">
@@ -174,7 +171,7 @@ export default function Business() {
                     <ul className="space-y-2 mb-8 text-sm md:text-base text-gray-400">
                       {service.bullets.map((line: string) => (
                         <li key={line} className="flex gap-2">
-                          <span className="mt-[6px] h-[3px] w-[14px] bg-[#dfff00] rounded-full shrink-0" />
+                          <span className="mt-[6px] h-[3px] w-[14px] bg-white rounded-full shrink-0" />
                           <span>{line}</span>
                         </li>
                       ))}
@@ -182,7 +179,7 @@ export default function Business() {
                   )}
                   <motion.button
                     whileHover={{ x: 10 }}
-                    className="text-sm md:text-base font-bold inline-flex items-center gap-2 group/btn border border-white/20 rounded-full px-5 py-2.5 hover:border-[#dfff00] transition-colors"
+                    className="text-sm md:text-base font-bold inline-flex items-center gap-2 group/btn border border-white/20 rounded-full px-5 py-2.5 hover:border-white transition-colors"
                   >
                     View Case Studies
                     <ArrowUpRight className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
@@ -194,7 +191,7 @@ export default function Business() {
                     src={service.image}
                     alt={service.title}
                     fill
-                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
               </div>
@@ -229,11 +226,11 @@ export default function Business() {
       <section className="py-40 px-6 text-center">
         <h2 className="text-5xl md:text-8xl font-black mb-12 tracking-tighter">
           READY TO <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#dfff00] to-transparent">
+          <span className="text-white">
             SCALE UP?
           </span>
         </h2>
-        <a href="/contact" className="inline-block px-12 py-5 bg-white text-black rounded-full text-xl font-bold hover:bg-[#dfff00] hover:scale-110 transition-all">
+        <a href="/contact" className="inline-block px-12 py-5 bg-white text-black rounded-full text-xl font-bold hover:bg-gray-100 hover:scale-110 transition-all">
           Start Your Journey
         </a>
       </section>
