@@ -17,23 +17,24 @@ export const images = [
 
 export const perspectives: Perspective[] = [
   {
-    title: 'Immersive experiences',
-    description: 'Where creativity comes to life',
+    title: 'Input ideas',
+    description: '크리에이터의 아이디어를 발견합니다.',
     position: 'top',
   },
   {
-    title: 'Infinite Perspective',
-    description: 'Explore new dimensions',
+    title: 'Output Contents',
+    description: '전략적인 콘텐츠로 구현합니다.',
     position: 'center',
   },
   {
-    title: '세상 속에서',
-    description: 'Immerse yourself in the extraordinary',
+    title: 'Make Value',
+    description: '가치 있는 결과를 만듭니다.',
     position: 'center',
   },
   {
     title: 'IOV STUDIO',
-    position: 'bottom',
+    description: '아이오브 스튜디오',
+    position: 'center',
   },
 ];
 

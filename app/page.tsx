@@ -8,6 +8,7 @@ import Typewriter from 'typewriter-effect';
 import Sticker from '@/components/Sticker';
 import AnimatedTextReveal from '@/components/AnimatedTextReveal';
 import CylinderCarousel from '@/components/codrops/CylinderCarousel';
+import S4Showcase from '@/components/S4Showcase';
 
 function AnimatedStatNumber({
   value,
@@ -225,71 +226,10 @@ export default function Home() {
 
       {/* 
         =============================================
-        ANIMATED TEXT REVEAL SECTION
+        SAMPLE S4 SHOWCASE SECTION (REPLACES TEXT + STATS)
         =============================================
       */}
-      <section className="py-32 bg-black relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <AnimatedTextReveal
-              lines={[
-                "오직 숏폼 마케팅만을",
-                "치열하게 고민해 왔기 때문입니다"
-              ]}
-            />
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.8 }}
-              className="text-xl text-gray-400 mt-8 max-w-2xl mx-auto"
-            >
-              몰입하고 고민한 시간들은 우리의 경험으로 누적되어 왔습니다
-            </motion.p>
-          </div>
-        </div>
-      </section>
-
-      {/* 
-        =============================================
-        STATS SECTION (SHORTT STYLE) - 아래로 이동 + Likes 카운트 업
-        =============================================
-      */}
-      <section className="py-20 relative bg-black overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              { label: "Creators", value: 50, suffix: "+", emoji: "👥", realtime: false },
-              // 뷰는 훨씬 더 빠르게: 큰 step + 짧은 interval
-              { label: "Total Views", value: 500_000_000, suffix: "+", emoji: "👀", realtime: true, step: 50, intervalMs: 50 },
-              { label: "Likes", value: 10_000_000, suffix: "+", emoji: "❤️", realtime: true, step: 5, intervalMs: 120 },
-            ].map((stat, idx) => (
-              <motion.div
-                key={stat.label}
-                className="text-center group"
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: idx * 0.1 }}
-              >
-                <div className="text-5xl mb-4 group-hover:scale-125 transition-transform">{stat.emoji}</div>
-                <h3 className="text-5xl md:text-6xl font-black text-white mb-2 tracking-tighter group-hover:text-[#dfff00] transition-colors">
-                  <AnimatedStatNumber
-                    value={stat.value}
-                    suffix={stat.suffix}
-                    realtime={stat.realtime}
-                    step={stat.step}
-                    intervalMs={stat.intervalMs}
-                  />
-                </h3>
-                <p className="text-gray-500 font-bold uppercase tracking-widest text-sm">
-                  {stat.label}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <S4Showcase />
 
       {/* 
         =============================================

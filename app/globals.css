@@ -4,6 +4,7 @@
   --background: #000000;
   --foreground: #ffffff;
   --primary: #dfff00;
+  --green: var(--primary);
   --neon-cyan: #00ffff;
   --neon-magenta: #ff00ff;
 }
@@ -81,6 +82,236 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* ===== SAMPLE S4 SECTION (card stack + stage text) ===== */
+.s4 .odometer * { transition: transform 1s !important; }
+.s4{text-align: center;}
+.s4 .cont{
+  width: 100%; height: calc(var(--vh,1vh)*100); font-size: 1px;
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.s4 .cont.mo{display: none;}
+.s4 .cont.pc h3{
+  width: 420em; height: 100%; display: inline-flex; align-items: center; justify-content: center;
+  position: absolute;
+}
+.s4 .side{
+  font-size: 44px; font-weight: 600;
+  line-height: 1.4; letter-spacing: -0.02em;
+  position: absolute; white-space: nowrap;
+}
+.s4 .side div{overflow: hidden;}
+.s4 .side.left{ text-align: right; right: 100%; padding-right: calc(80/72*1em); }
+.s4 .side.right{ text-align: left; left: 100%; padding-left: calc(80/72*1em); }
+
+.s4 .pinBx{ width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.s4 .cardArea{
+  width: 420em; position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.s4 .cardArea::before { content:''; display: block; width: 100%; padding-bottom: calc(683/384*100%); }
+.s4 .cardArea > div{ position: absolute; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.s4 .card{
+  position: absolute;
+  width: 100%; height: 100%;
+  perspective: 800em;
+}
+.s4 .card.n1{z-index: 4;}
+.s4 .card.n2{z-index: 3;}
+.s4 .card.n3{z-index: 2;}
+.s4 .card.n4{z-index: 1;}
+.s4 .card div{width: 100%; height: 100%; perspective: 1000em;}
+.s4 .card .imgBx{position: relative;}
+.s4 .card .imgBx div{
+  position: absolute; left: 0; top: 0;
+  width: 100%; height: 100%; border-radius: 20em; background-size: cover;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+.s4 .card .imgBx div.on{opacity: 1;}
+.s4  ._tilt{transition: transform 0.1s,pointer-events 0s 0.8s; pointer-events: none;}
+.s4.motion3 ._tilt{pointer-events: auto;}
+
+/* 영상 들어가는 카드 */
+.s4 .cardArea .back{position: relative; backface-visibility: hidden;}
+.s4 .cardArea .videoBx{
+  position: absolute; left: 0; top: 0;
+  width: 100%; height: 100%; background-color: #fff;
+  transform: rotateY(180deg); border-radius: 20em; overflow: hidden;
+  backface-visibility: hidden;
+  background-color: #000;
+}
+.s4 .cardArea .videoBx > *{
+  opacity: 0;
+  transition: opacity 0.5s;
+  width: 100%; height: 125%;
+  position: absolute;
+  left: 50%; top: 50%; transform: translate(-50%,-50%);
+}
+.s4 .cardArea .videoBx > *.on{opacity: 1;}
+
+.s4 .cont .txtBx{
+  display: flex; align-items: center; justify-content: flex-start;
+  position: absolute; transform: translate(120em, 40px); opacity: 0;
+  white-space: nowrap;  text-align: left;
+  transition: opacity 0.8s, transform 0.8s;
+}
+.s4 .cont .txtBx.on{opacity: 1; transform:translate(120em, 0); transition-delay: 0.8s;}
+.s4 .cont .txt{position: absolute; opacity: 0; transition: opacity 0.5s; pointer-events: none;}
+.s4 .cont .txt.on{opacity: 1; pointer-events: auto;}
+.s4 .cont .txt > p{
+  font-size: max(18em,14px); line-height: 1.666; margin-top: calc(44/18*1em); margin-bottom: calc(50/18*1em);
+  font-weight: 300;
+}
+.s4 .cont .txt > p span{display: inline-block;}
+
+.s4 .cont .txt .bottom .row:not(:first-child){margin-top: 40em;}
+.s4 .cont .txt .bottom .row h4{font-size: max(16em,12px); font-weight: 500; margin-bottom: 1em;}
+.s4 .cont .txt .bottom .row .flexBx{ display: flex; align-items: flex-start; gap: 30em; }
+.s4 .cont .txt .bottom .row .flexBx > div.minWidth{min-width: 240em;}
+.s4 .cont .txt .bottom .row .flexBx > div small{font-size: max(16em,10px); color: #7c7c7c; margin-bottom: 1em;}
+.s4 .cont .txt .bottom .row .flexBx > div > div{
+  font-size: max(26em,14px); color: var(--green); font-weight: 500;
+  display: flex; align-items: center;
+}
+.s4 .cont .txt .bottom .row .flexBx > div > div *{line-height: 1; vertical-align: top;}
+
+.s4 .cont .txt .bottom .row .flexBx > div > div.color{ position: relative; color: #fff; }
+.s4 .cont .txt .bottom .row .flexBx > div > div.color p{
+  position: absolute; left: 0; top: 0; overflow: hidden;
+  color: var(--green); width: 0%; transition: width 1s 0.8s;
+}
+.s4 .cont .txt.on .bottom .row .flexBx > div > div.color p{width: 100%;}
+.s4 .cont .txt .bottom .row .flexBx > div > div.big{font-size: max(40em,14px);}
+
+/* 미샤 이미지 */
+.s4 .cont .txt .bottom .row .flexBx > div .img{position: relative; margin-top: 20px;}
+.s4 .cont .txt .bottom .row .flexBx > div .img .no1{position: absolute; z-index: 2; left: 0; top: 0; transform: scale(0.5); opacity: 0; transition: transform 0.5s,opacity 0.5s;}
+.s4 .cont .txt .bottom .row .flexBx > div .img .chart{opacity: 0; transform: translateY(40px); transition: transform 0.8s,opacity 0.8s;}
+.s4 .cont .txt.on .bottom .row .flexBx > div .img .no1{transform: scale(1); opacity: 1; transition-delay: 0.8s;}
+.s4 .cont .txt.on .bottom .row .flexBx > div .img .chart{transform: translateY(0); opacity: 1; transition-delay: 0.3s;}
+
+/* 모션 셋팅 */
+.s4 .card > div{transition: transform 0.8s;}
+.s4 .card.n2 > div{transform: translateZ(-120em) translateY(-10%);}
+.s4 .card.n3 > div{transform: translateZ(-240em) translateY(-20%);}
+.s4 .card.n4 > div{transform: translateZ(-360em) translateY(-29%);}
+.s4.motion1 .card > div{transition: transform 0.5s;}
+.s4.motion1 .card.n2 > div{transform: translateZ(-120em) translateY(0);}
+.s4.motion1 .card.n3 > div{transform: translateZ(-240em) translateY(0);}
+.s4.motion1 .card.n4 > div{transform: translateZ(-360em) translateY(0);}
+.s4.motion2 .card > div{transition: transform 0.5s;}
+.s4.motion2 .card.n1 > div {transform: rotateY(-25deg) translateX(-40%);}
+.s4.motion2 .card.n2 > div {transform: rotateY(-25deg) translateX(-20%) translateZ(-40em);}
+.s4.motion2 .card.n3 > div {transform: rotateY(-25deg) translateX(0%) translateZ(-120em);}
+.s4.motion2 .card.n4 > div {transform: rotateY(-25deg) translateX(20%) translateZ(-200em);}
+.s4 .cardArea{transition: transform 1s; transform: translateX(0em);}
+.s4.motion3 .cardArea{transform: translateX(-180em);}
+.s4.motion3 .card > div{transition: transform 0.8s;}
+.s4.motion3 .card.n1 > div {transform: rotateY(-25deg) translateX(-190%) scale(0.55);}
+.s4.motion3 .card.n2 > div {transform: rotateY(-25deg) translateX(-170%) scale(0.55) translateZ(-40em);}
+.s4.motion3 .card.n3 > div {transform: rotateY(-25deg) translateX(-165%) scale(0.55) translateZ(-120em);}
+.s4.motion3 .card.n4 > div {transform: rotateY(0deg) translateX(0%) translateZ(0em);}
+.s4 .cardArea .back{transition: transform 0.8s; transform-style: preserve-3d;}
+.s4.motion3 .back{transform: rotateY(180deg); transition-delay: 0.6s;}
+
+/* 클릭 시 "중앙 카드(n4)만" 모션2 → 모션3(플립) 애니메이션을 재생하기 위한 리플레이 상태 */
+.s4.replay .card.n4 > div { transition: none !important; transform: rotateY(-25deg) translateX(20%) translateZ(-200em) !important; }
+.s4.replay .card.n4 .back{ transform: rotateY(0deg) !important; transition: none !important; }
+
+/* 사용자가 요청한 동작: 스테이지 3(모션2 이후)부터는 좌/우 소개 문구(.side) 숨김 */
+.s4.motion2 .side,
+.s4.motion3 .side{
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+/* 오브젝트 */
+.s4 .objArea{
+  position: absolute; left: 0; top: 0;
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center; z-index: -1;
+  transform: scale(0.2); transition: transform 1s;
+}
+.s4.motion2 .objArea{transform: scale(1);}
+.s4 .objArea img{opacity: 0; transition: opacity 0.8s;}
+.s4.motion2 .objArea img{opacity: 1;}
+.s4 .objArea .n1{position: absolute;right: 40em;top: 110em;}
+.s4 .objArea .n2{position: absolute;left: -70em;bottom: -60em;}
+.s4 .objArea .n1 img{width: 200em;}
+.s4 .objArea .n2 img{width: 340em;}
+
+/* 모바일에선 슬라이드로 */
+.s4 .cont.mo{}
+.s4 .cont.mo .swiperBx{ box-sizing: border-box; width: 100%; }
+.s4 .cont.mo h3{
+  font-size: max(calc(44 / 1440 * 100vw), 28px);
+  font-weight: 600;
+  line-height: 1.4; letter-spacing: -0.02em;
+  margin-bottom: 1em;
+}
+.s4 .cont.mo h3 > div > div{overflow: hidden;}
+.s4 .cont.mo h3 small{
+  font-size: 18px; margin-top: 1em;
+  font-weight: 500; color: #777;
+  overflow: hidden;
+}
+.s4 .cont.mo h3 small span{display: block;}
+.s4 .cont.mo .swiper{ width: 400px; overflow: visible; }
+.s4 .cont.mo .swiper-slide .mobileVideoBx{
+  pointer-events: none; width: 100%; position: relative;
+  margin-bottom: 30px;
+  border-radius: 20px; overflow: hidden;
+}
+.s4 .cont.mo .swiper-slide .mobileVideoBx::before { content:''; display: block; width: 100%; padding-bottom: calc(1920/1080*100%); }
+.s4 .cont.mo .swiper-slide .mobileVideoBx > *{
+  position: absolute; left: 0; top: 0;
+  width: 100%; height: 100%; object-fit: cover;
+}
+.s4 .cont.mo .swiper-slide .bottom{display: none;}
+
+@media screen and (max-width:1800px) { .s4 .cont{font-size: calc(1/1800*100vw);} }
+@media screen and (max-width:1600px) {
+  .s4 .cont .txt .logo{height: 44em; width: 160em;}
+  .s4 .cont .txt .logo img{height: 100%; object-fit: contain;}
+  .s4 .cont .txt > p{margin-top: 20px;}
+}
+@media screen and (max-width:1440px) { .s4 .side{font-size: max(calc(44/1440*100vw),28px);} }
+@media screen and (max-width:1280px) {
+  .s4 .cont .txtBx{white-space: unset; width: 40vw; transform: translate(460em,40px);}
+  .s4 .cont .txtBx.on{transform: translate(460em,0);}
+  .s4 .cont .txt > p br{display: none;}
+}
+@media screen and (max-width:1024px) {
+  .s4 .cont.pc{display: none;}
+  .s4 .cont.mo{display: block; height: auto; font-size: 1px;}
+  .s4 .cont .txt{position: unset; opacity: 1; font-size: 0.5px;}
+  .s4 .cont .txt .logo{margin: 0 auto; width: 140px; height: 40px;}
+  .s4 .cont .txt > p{font-size: 18px;}
+  .s4 .cont .txt > p br{display: block;}
+  .s4 .cont .txt .bottom .row .flexBx{justify-content: center; flex-wrap: wrap;}
+  .s4 .cont .txt .bottom .row .flexBx > div.minWidth{min-width: unset;}
+  .s4 .cont .txt .bottom .row .flexBx > div > div{justify-self: center;}
+}
+@media screen and (max-width:820px) {
+  .s4 .cont.mo{font-size: max(calc(1/820*100vw),0.7px);}
+  .s4 .cont.mo .swiper{width: max(calc(380/820*100vw),300px);}
+  .s4 .cont .txt > p{font-size: 16px;}
+  .s4 .cont .txt > p br{display: none;}
+  .s4 .cont .txt .bottom {display: none;}
+  .s4 .cont .txt > p{margin-bottom: 0;}
+}
+@media screen and (max-width:500px) {
+  .s4 .cont.mo h3{font-size: calc(36 / 500 * 100vw);}
+  .s4 .cont.mo h3 small{font-size: 16px;}
+  .s4 .cont.mo .swiper{width: 65%; max-width: 500px;}
+  .s4 .cont.mo .swiper-slide .mobileVideoBx{border-radius: 10px; margin-bottom: 20px;}
+  .s4 .cont .txt > p{font-size: 13px; margin-top: 12px;}
+  .s4 .cont .txt .logo{width: 80px; height: 20px;}
+}
+
 
 .text-stroke {
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
