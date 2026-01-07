@@ -211,6 +211,7 @@ export default function S4Showcase() {
 
   return (
     <section ref={sectionRef} className="s4 bg-black text-white relative">
+      {/* PC 레이아웃 (3D 카드 + ScrollTrigger) */}
       <div className="cont pc">
         <h3>
           <div className="side left">
@@ -445,6 +446,71 @@ export default function S4Showcase() {
 
           </div>
         </h3>
+      </div>
+
+      {/* 모바일 레이아웃: 단순 세로 카드 리스트 */}
+      <div className="cont mo">
+        <div className="max-w-md mx-auto space-y-6">
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-5">
+            <div
+              className="w-full rounded-2xl overflow-hidden mb-4 aspect-[9/16] bg-center bg-cover"
+              style={{ backgroundImage: 'url(/asset/img/main/s4_thumb_tirtir.jpg)' }}
+            />
+            <div className="logo mb-3 flex justify-center">
+              <img src="/asset/img/main/logo_tirtir.png" alt="TIRTIR 로고" className="h-6 object-contain" />
+            </div>
+            <p className="text-xs text-gray-300 leading-relaxed">
+              30가지의 색상으로 확장된 제품의 USP를 연구하는 것에서부터 아이디어가 시작되었습니다. AR 필터를 통해 제품의 핵심 강점인
+              ‘다양한 컬러’를 소비자들이 직접 체험할 수 있도록 개발하였고, 누구나 자신에게 꼭 맞는 색을 찾을 수 있다는 메시지를 담은
+              콘텐츠 바이럴을 성공적으로 이끌어냈습니다.
+            </p>
+          </div>
+
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-5">
+            <div
+              className="w-full rounded-2xl overflow-hidden mb-4 aspect-[9/16] bg-center bg-cover"
+              style={{ backgroundImage: 'url(/asset/img/main/s4_thumb_nongsim.jpg)' }}
+            />
+            <div className="logo mb-3 flex justify-center">
+              <img src="/asset/img/main/logo_nongsim.png" alt="농심 로고" className="h-6 object-contain" />
+            </div>
+            <p className="text-xs text-gray-300 leading-relaxed">
+              유럽, 중동, 동남아를 중심으로 국가마다 홍보 대상을 다르게 두어, 지역 별 입맛에 맞춘 제품을 홍보하였습니다. 각 국가의 다양한
+              크리에이터를 섭외하여 브랜드 인지도 및 호감도를 향상시켰으며, 특히 동남아에서는 참여형 캠페인(BM+BE)을 통해 틱톡 내 버즈를
+              일으키도록 캠페인을 전개하였습니다.
+            </p>
+          </div>
+
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-5">
+            <div
+              className="w-full rounded-2xl overflow-hidden mb-4 aspect-[9/16] bg-center bg-cover"
+              style={{ backgroundImage: 'url(/asset/img/main/s4_thumb_lg.jpg)' }}
+            />
+            <div className="logo mb-3 flex justify-center">
+              <img src="/asset/img/main/logo_lg.png" alt="LG 로고" className="h-6 object-contain" />
+            </div>
+            <p className="text-xs text-gray-300 leading-relaxed">
+              LG전자의 NeoChef 제품을 홍보하기 위한 콘텐츠를 기획, 촬영, 편집까지 숏뜨에서 제작 전 과정을 진행하였습니다. LG의 글로벌 틱톡
+              계정은 물론, 국가별 채널에 활용되었으며 모든 채널에서 훌륭한 성과를 보여주었습니다. 총 조회수 1.5억 뷰를 달성하며 국내뿐만
+              아니라 글로벌에서도 유의미한 Creative 성과를 만들어 냈습니다.
+            </p>
+          </div>
+
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-5">
+            <div
+              className="w-full rounded-2xl overflow-hidden mb-4 aspect-[9/16] bg-center bg-cover"
+              style={{ backgroundImage: 'url(/asset/img/main/s4_thumb_misha.jpg)' }}
+            />
+            <div className="logo mb-3 flex justify-center">
+              <img src="/asset/img/main/logo_missha.png" alt="미샤 로고" className="h-6 object-contain" />
+            </div>
+            <p className="text-xs text-gray-300 leading-relaxed">
+              미샤의 제품을 소비자들에게 진심으로 설명해 줄 수 있는 크리에이터들을 선별하는데 많은 노력을 기울였습니다. 각 크리에이터의
+              특성과 히스토리에 알맞은 콘텐츠를 만들었으며, K-beauty, Skinfluencer 등 제품과 밀접한 특색을 가진 크리에이터와 협업하여 단일
+              영상만으로 850만 이상의 조회수를 달성하였습니다.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
