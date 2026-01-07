@@ -19,11 +19,27 @@ export default function S4Showcase() {
   );
   const isInteractiveRef = useRef(false);
   const hasEnteredFinalRef = useRef(false);
+  const hasInitializedRef = useRef(false);
+  const currentStageRef = useRef(1); // 현재 중앙 카드(브랜드) 인덱스
 
-  const handleCardClick = (index: number) => {
+  const handleCardClick = (slotIndex: number) => {
     if (!isInteractiveRef.current) return;
     const section = sectionRef.current;
     if (!section) return;
+
+    // 현재 중앙에 있는 브랜드 인덱스
+    const current = currentStageRef.current;
+
+    // 클릭한 카드 위치(slot)에 따라 어떤 브랜드를 보여줄지 계산
+    let targetStage = current;
+    if (slotIndex === 3) {
+      // 중앙 카드(n4)를 클릭하면 현재 브랜드 유지
+      targetStage = current;
+    } else {
+      // 스택 카드(n1~n3)는 "현재 브랜드를 제외한 나머지 3개" 중에서 해당 순서
+      const others = BRAND_THUMBS.map((_, i) => i).filter((i) => i !== current);
+      targetStage = others[slotIndex] ?? current;
+    }
 
     // sample의 "3→4 전환" 느낌(슬라이드+플립)을 클릭 때도 재생
     section.classList.add('replay');
@@ -31,7 +47,7 @@ export default function S4Showcase() {
     void section.offsetHeight;
 
     if (updateAllRef.current) {
-      updateAllRef.current(index, true);
+      updateAllRef.current(targetStage, true);
     }
 
     requestAnimationFrame(() => {
@@ -59,6 +75,9 @@ export default function S4Showcase() {
 
     // 카드/비디오만 바꾸는 함수 (텍스트는 건드리지 않음)
     const updateVisual = (stage: number) => {
+      // 현재 중앙 카드(stage)를 기억해 두기
+      currentStageRef.current = stage;
+
       // 중앙 카드(n4) 썸네일만 on/off (스택 카드들은 고정)
       if (mainImgGroup) {
         const items = Array.from(mainImgGroup.querySelectorAll<HTMLDivElement>('div'));
@@ -119,7 +138,8 @@ export default function S4Showcase() {
 
     if (isMobile) {
       section.classList.remove('motion1', 'motion2', 'motion3');
-      updateAllRef.current?.(0, true);
+      // 모바일에서는 두 번째 카드(스테이지 1)를 기본으로 노출
+      updateAllRef.current?.(1, true);
       isInteractiveRef.current = false; // 모바일에서는 카드 클릭 전환 비활성화
       return;
     }
@@ -131,22 +151,35 @@ export default function S4Showcase() {
       scrub: true,
       pin: section,
       onUpdate: (self) => {
+        // 첫 진입 시에는 스크롤 위치와 관계없이 항상 "두 번째 카드(스테이지 1)"부터 보여주기
+        if (!hasInitializedRef.current) {
+          hasInitializedRef.current = true;
+          section.classList.add('motion1');
+          updateAllRef.current?.(1, false);
+          return;
+        }
+
         const p = self.progress;
         section.classList.remove('motion1', 'motion2', 'motion3');
 
-        let scrollStage = 0;
+        let scrollStage = 0; // 모션(레이아웃) 단계
+        let visualStage = 1; // 실제로 보여줄 카드/텍스트 인덱스
 
         if (p < 0.25) {
           scrollStage = 0;
+          visualStage = 1; // 두 번째 카드
           section.classList.add('motion1');
         } else if (p < 0.5) {
           scrollStage = 1;
+          visualStage = 2;
           section.classList.add('motion1');
         } else if (p < 0.75) {
           scrollStage = 2;
+          visualStage = 3;
           section.classList.add('motion2');
         } else {
           scrollStage = 3;
+          visualStage = 3;
           section.classList.add('motion3');
         }
 
@@ -157,18 +190,18 @@ export default function S4Showcase() {
         if (scrollStage === 3) {
           if (!hasEnteredFinalRef.current) {
             hasEnteredFinalRef.current = true;
-            updateAllRef.current?.(3, true); // 처음 진입 시 MISSHA + 텍스트 노출
+            updateAllRef.current?.(visualStage, true); // 처음 진입 시 최종 카드 + 텍스트 노출
           }
         } else {
           hasEnteredFinalRef.current = false;
-          updateAllRef.current?.(scrollStage, false);
+          updateAllRef.current?.(visualStage, false);
         }
       },
     });
 
-    // 초기 상태 (데스크톱)
+    // 초기 상태 (데스크톱) - 두 번째 카드부터
     section.classList.add('motion1');
-    updateAllRef.current?.(0, false);
+    updateAllRef.current?.(1, false);
     ScrollTrigger.refresh();
 
     return () => {
