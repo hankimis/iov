@@ -1,0 +1,153 @@
+<div class="pin-spacer" bis_skin_checked="1" style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: flex; margin: 0px; inset: auto; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1429px; height: 1316px; padding: 0px;"><div class="pinBx" bis_skin_checked="1" style="translate: none; rotate: none; scale: none; inset: 0px auto auto 0px; margin: 0px; max-width: 1429.33px; width: 1429.33px; max-height: 1316px; height: 1316px; padding: 0px; transform: translate(0px, 0px);">
+                        <div class="cardArea" bis_skin_checked="1">
+                            <div class="card n1" bis_skin_checked="1" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                <div bis_skin_checked="1">
+                                    <div class="imgBx _tilt" bis_skin_checked="1">
+                                        <div class="on" style="background-image: url(/asset/img/main/s4_thumb_tirtir.jpg);" bis_skin_checked="1"></div>
+                                        <div style="background-image: url(/asset/img/main/s4_thumb_nongsim.jpg);" bis_skin_checked="1"></div>
+                                        <div style="background-image: url(/asset/img/main/s4_thumb_lg.jpg);" bis_skin_checked="1"></div>
+                                        <div style="background-image: url(/asset/img/main/s4_thumb_misha.jpg);" bis_skin_checked="1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card n2" bis_skin_checked="1" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                <div bis_skin_checked="1">
+                                    <div class="imgBx _tilt" bis_skin_checked="1">
+										<div style="background-image: url(/asset/img/main/s4_thumb_tirtir.jpg);" bis_skin_checked="1"></div>
+                                        <div class="on" style="background-image: url(/asset/img/main/s4_thumb_nongsim.jpg);" bis_skin_checked="1"></div>
+                                        <div style="background-image: url(/asset/img/main/s4_thumb_lg.jpg);" bis_skin_checked="1"></div>
+                                        <div style="background-image: url(/asset/img/main/s4_thumb_misha.jpg);" bis_skin_checked="1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card n3" bis_skin_checked="1" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                <div bis_skin_checked="1">
+                                    <div class="imgBx _tilt" bis_skin_checked="1">
+										<div style="background-image: url(/asset/img/main/s4_thumb_tirtir.jpg);" bis_skin_checked="1"></div>
+                                        <div style="background-image: url(/asset/img/main/s4_thumb_nongsim.jpg);" bis_skin_checked="1"></div>
+                                        <div class="on" style="background-image: url(/asset/img/main/s4_thumb_lg.jpg);" bis_skin_checked="1"></div>
+                                        <div style="background-image: url(/asset/img/main/s4_thumb_misha.jpg);" bis_skin_checked="1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card n4" bis_skin_checked="1" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><div bis_skin_checked="1"><div class="back" bis_skin_checked="1">
+                                <div class="imgBx" bis_skin_checked="1">
+									<div style="background-image: url(/asset/img/main/s4_thumb_tirtir.jpg);" bis_skin_checked="1"></div>
+									<div style="background-image: url(/asset/img/main/s4_thumb_nongsim.jpg);" bis_skin_checked="1"></div>
+									<div style="background-image: url(/asset/img/main/s4_thumb_lg.jpg);" bis_skin_checked="1"></div>
+									<div class="on" style="background-image: url(/asset/img/main/s4_thumb_misha.jpg);" bis_skin_checked="1"></div>
+                                </div>
+                                <div class="videoBx" bis_skin_checked="1">
+									<!-- 티르티르 -->
+									<iframe src="https://player.vimeo.com/video/1116036197?autoplay=1&amp;muted=1&amp;loop=1&amp;background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="" data-ready="true"></iframe>
+									<!-- 농심 -->
+									<iframe src="https://player.vimeo.com/video/1116036182?autoplay=1&amp;muted=1&amp;loop=1&amp;background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="" data-ready="true"></iframe>
+                                    <!-- LG -->
+                                    <iframe src="https://player.vimeo.com/video/1116036167?autoplay=1&amp;muted=1&amp;loop=1&amp;background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="" data-ready="true"></iframe>
+									<!-- 미샤 -->
+									<iframe class="on" src="https://player.vimeo.com/video/1116036157?autoplay=1&amp;muted=1&amp;loop=1&amp;background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="" data-ready="true"></iframe>
+                                </div>
+                            </div></div></div>
+                        </div>
+                        <div class="txtBx" bis_skin_checked="1">
+							<div class="txt" bis_skin_checked="1">
+                                <div class="logo" bis_skin_checked="1"><img src="/asset/img/main/logo_tirtir.png" alt="티르티르 로고"></div>
+                                <p>
+                                    30가지의 색상으로 확장된 제품의 USP를 연구하는 것에서부터 아이디어가 <br>
+                                    시작되었습니다. AR 필터를 통해 제품의 핵심 강점인 ‘다양한 컬러’를 소비자들이 <br>
+                                    직접 체험할 수 있도록 개발하였고, 누구나 자신에게 꼭 맞는 색을 찾을 수 있다는 <br>
+                                    메시지를 담은 콘텐츠 바이럴을 성공적으로 이끌어냈습니다.
+								</p>
+                                <div class="bottom" bis_skin_checked="1">
+                                    <div class="row" bis_skin_checked="1">
+                                        <div class="flexBx" bis_skin_checked="1">
+                                            <div bis_skin_checked="1"><small>Total Video Views</small><div class="big" bis_skin_checked="1"><div class="dot odometer odometer-auto-theme" bis_skin_checked="1"><div class="odometer-inside" bis_skin_checked="1"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></div>M</div></div>
+                                            <div bis_skin_checked="1"><small>Video Creations</small><div class="big" bis_skin_checked="1"><div class="dot odometer odometer-auto-theme" bis_skin_checked="1"><div class="odometer-inside" bis_skin_checked="1"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></div>K</div></div>
+                                            <div bis_skin_checked="1"><small>Engagement Rate</small><div class="big" bis_skin_checked="1"><div class="dot odometer odometer-auto-theme" bis_skin_checked="1"><div class="odometer-inside" bis_skin_checked="1"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></div>%</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							<div class="txt" bis_skin_checked="1">
+                                <div class="logo" bis_skin_checked="1"><img src="/asset/img/main/logo_nongsim.png" alt="농심 로고"></div>
+                                <p>
+                                    유럽, 중동, 동남아를 중심으로 국가마다 홍보 대상을 다르게 두어, 지역 별 입맛에 <br>
+                                    맞춘 제품을 홍보하였습니다. 각 국가의 다양한 크리에이터를 섭외하여 브랜드 <br>
+                                    인지도 및 호감도를 향상시켰으며, 특히 동남아에서는 참여형 캠페인(BM+BE)을 <br>
+                                    통해 틱톡 내 버즈를 일으키도록 캠페인을 전개하였습니다.
+								</p>
+                                <div class="bottom" bis_skin_checked="1">
+                                    <div class="row" bis_skin_checked="1">
+                                        <h4>동남아</h4>
+                                        <div class="flexBx" bis_skin_checked="1">
+                                            <div class="minWidth" bis_skin_checked="1"><small>Target Countries</small><div bis_skin_checked="1">TH, ID, MY</div></div>
+                                            <div bis_skin_checked="1"><small>Video Creations</small><div bis_skin_checked="1"><div class="odometer odometer-auto-theme" bis_skin_checked="1"><div class="odometer-inside" bis_skin_checked="1"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></div>K</div></div>
+                                            <div bis_skin_checked="1"><small>Video Views</small><div bis_skin_checked="1"><div class="odometer odometer-auto-theme" bis_skin_checked="1"><div class="odometer-inside" bis_skin_checked="1"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></div>M</div></div>
+                                            <div bis_skin_checked="1"><small>Engagements</small><div bis_skin_checked="1"><div class="dot odometer odometer-auto-theme" bis_skin_checked="1"><div class="odometer-inside" bis_skin_checked="1"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></div>M</div></div>
+                                        </div>
+                                    </div>
+                                    <div class="row" bis_skin_checked="1">
+                                        <h4>유럽 &amp; 중동</h4>
+                                        <div class="flexBx" bis_skin_checked="1">
+                                            <div class="minWidth" bis_skin_checked="1"><small>Target Countries</small><div bis_skin_checked="1">UK, DE | KSA, UAE</div></div>
+                                            <div bis_skin_checked="1"><small>Impression</small><div bis_skin_checked="1"><div class="odometer odometer-auto-theme" bis_skin_checked="1"><div class="odometer-inside" bis_skin_checked="1"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></div>M</div></div>
+                                            <div bis_skin_checked="1"><small>Video Views</small><div bis_skin_checked="1"><div class="odometer odometer-auto-theme" bis_skin_checked="1"><div class="odometer-inside" bis_skin_checked="1"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></div>M</div></div>
+                                            <div bis_skin_checked="1"><small>Engagements</small><div bis_skin_checked="1"><div class="dot odometer odometer-auto-theme" bis_skin_checked="1"><div class="odometer-inside" bis_skin_checked="1"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></div>M</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="txt" bis_skin_checked="1">
+                                <div class="logo" bis_skin_checked="1"><img src="/asset/img/main/logo_lg.png" alt="엘지 로고"></div>
+                                <p>
+									LG전자의 NeoChef 제품을 홍보하기 위한 콘텐츠를 기획, 촬영, 편집까지 <br>
+									숏뜨에서 제작 전 과정을 진행하였습니다. LG의 글로벌 틱톡 계정은 물론, <br>
+									국가별 채널에 활용되었으며 모든 채널에서 훌륭한 성과를 보여주었습니다. <br>
+									총 조회수 1.5억 뷰를 달성하며 국내뿐만 아니라 <br>
+									글로벌에서도 유의미한 Creative 성과를 만들어 냈습니다.
+								</p>
+                                <div class="bottom" bis_skin_checked="1">
+                                    <div class="row" bis_skin_checked="1">
+                                        <div class="flexBx" bis_skin_checked="1">
+                                            <div bis_skin_checked="1"><small>Total Video Views</small><div class="big" bis_skin_checked="1"><div class="odometer odometer-auto-theme" bis_skin_checked="1"><div class="odometer-inside" bis_skin_checked="1"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></div>M</div></div>
+                                            <div bis_skin_checked="1"><small>Engagement Rate</small><div class="big" bis_skin_checked="1"><div class="odometer odometer-auto-theme" bis_skin_checked="1"><div class="odometer-inside" bis_skin_checked="1"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></div>K</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="txt on" bis_skin_checked="1">
+                                <div class="logo" bis_skin_checked="1"><img src="/asset/img/main/logo_missha.png" alt="미샤 로고"></div>
+                                <p>
+									미샤의 제품을 소비자들에게 진심으로 설명해 줄 수 있는 크리에이터들을 <br>
+									선별하는데 많은 노력을 기울였습니다. 각 크리에이터의 특성과 <br>
+									히스토리에 알맞은 콘텐츠를 만들었으며, <span>K-beauty, Skinfluencer</span> 등 <br>
+									제품과 밀접한 특색을 가진 크리에이터와 협업하여 단일 영상만으로 <br>
+									850만 이상의 조회수를 달성하였습니다.
+								</p>
+                                <div class="bottom" bis_skin_checked="1">
+                                    <div class="row" bis_skin_checked="1">
+                                        <div class="flexBx" bis_skin_checked="1">
+                                            <div bis_skin_checked="1">
+												<small>Amazon Primeday</small>
+												<div class="img" bis_skin_checked="1">
+													<div class="no1" bis_skin_checked="1"><img src="/asset/img/main/s4_missha_no1.png" alt=""></div>
+													<div class="chart" bis_skin_checked="1"><img src="/asset/img/main/s4_missha.png" alt=""></div>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+									<div class="row" bis_skin_checked="1">
+										<div class="flexBx" bis_skin_checked="1">
+											<div bis_skin_checked="1"><small>Campaign Period</small><div bis_skin_checked="1">May 2024 - Jul 2025</div></div>
+											<div bis_skin_checked="1"><small>Total Video Views</small><div bis_skin_checked="1"><div class="dot odometer odometer-auto-theme" bis_skin_checked="1"><div class="odometer-inside" bis_skin_checked="1"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></div>M</div></div>
+										</div>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="objArea" bis_skin_checked="1">
+                            <div class="n1" bis_skin_checked="1"><div bis_skin_checked="1"><div class="_scale90 _delay5" bis_skin_checked="1"><img class="_floating40" src="/asset/img/common/obj_clova.png" alt=""></div></div></div>
+                            <div class="n2" bis_skin_checked="1"><div bis_skin_checked="1"><div class="_scale90" bis_skin_checked="1"><img class="_floating40 _delay5" src="/asset/img/common/obj_flower.png" alt=""></div></div></div>
+                        </div>
+                    </div></div>

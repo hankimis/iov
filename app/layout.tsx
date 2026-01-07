@@ -23,21 +23,30 @@ const syne = Syne({
   variable: '--font-syne',
 });
 
+const SITE_URL = 'https://www.iovstudio.kr';
+
 export const metadata: Metadata = {
-  title: "IOV | Input Output Value",
-  description: "Global Tech-Media Group. 아이디어를 가치로 증명하는 글로벌 MCN.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: 'IOV STUDIO | 데이터로 설계하는 크리에이터 성장 MCN',
+    template: '%s | IOV STUDIO',
+  },
+  description: 'IOV STUDIO는 바이럴 데이터와 콘텐츠 시스템을 기반으로 크리에이터의 성장을 반복 가능하게 만드는 MCN입니다.',
   openGraph: {
-    title: "IOV | Input Output Value",
-    description: "아이디어를 가치로 증명하는 글로벌 Tech-Media Group. 크리에이터와 비즈니스를 연결합니다.",
-    url: "https://iov.kr",
-    siteName: "IOV",
-    locale: "ko_KR",
-    type: "website",
+    title: 'IOV STUDIO | 데이터로 설계하는 크리에이터 성장 MCN',
+    description: '아이디어를 가치로 증명하는 글로벌 Tech-Media Group. 크리에이터와 비즈니스를 연결합니다.',
+    url: SITE_URL,
+    siteName: 'IOV STUDIO',
+    locale: 'ko_KR',
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "IOV | Input Output Value",
-    description: "Global Tech-Media Group",
+    card: 'summary_large_image',
+    title: 'IOV STUDIO | 데이터로 설계하는 크리에이터 성장 MCN',
+    description: 'Global Tech-Media Group for Creators and Brands.',
+  },
+  alternates: {
+    canonical: SITE_URL,
   },
 };
 

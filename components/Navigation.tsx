@@ -65,7 +65,7 @@ const Navigation = () => {
 
   const navStyle =
     isCreators
-      ? 'bg-black/80 backdrop-blur-md border-b border-white/10 py-4'
+      ? 'bg-black/80 backdrop-blur-md py-4'
       : scrolled
         ? 'glass-nav py-4'
         : 'bg-transparent py-6';

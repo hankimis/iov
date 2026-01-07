@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/admin/',
         },
-        sitemap: 'https://iov.kr/sitemap.xml',
+        sitemap: 'https://www.iovstudio.kr/sitemap.xml',
     };
 }

@@ -110,6 +110,20 @@ export default function S4Showcase() {
       updateVisual(stage);
     };
 
+    // 모바일(태블릿 이하)에서는 ScrollTrigger/pin을 사용하지 않고,
+    // 첫 번째 브랜드(티르티르)만 고정으로 보여주기
+    const isMobile =
+      typeof window !== 'undefined' &&
+      window.matchMedia &&
+      window.matchMedia('(max-width: 1024px)').matches;
+
+    if (isMobile) {
+      section.classList.remove('motion1', 'motion2', 'motion3');
+      updateAllRef.current?.(0, true);
+      isInteractiveRef.current = false; // 모바일에서는 카드 클릭 전환 비활성화
+      return;
+    }
+
     const trigger = ScrollTrigger.create({
       trigger: section,
       start: 'top top',
@@ -152,7 +166,7 @@ export default function S4Showcase() {
       },
     });
 
-    // 초기 상태
+    // 초기 상태 (데스크톱)
     section.classList.add('motion1');
     updateAllRef.current?.(0, false);
     ScrollTrigger.refresh();

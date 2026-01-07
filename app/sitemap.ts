@@ -3,37 +3,37 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
         {
-            url: 'https://iov.kr',
+            url: 'https://www.iovstudio.kr',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 1,
         },
         {
-            url: 'https://iov.kr/about',
+            url: 'https://www.iovstudio.kr/about',
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
-            url: 'https://iov.kr/business',
+            url: 'https://www.iovstudio.kr/business',
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
-            url: 'https://iov.kr/creators',
+            url: 'https://www.iovstudio.kr/creators',
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.8,
         },
         {
-            url: 'https://iov.kr/recruit',
+            url: 'https://www.iovstudio.kr/recruit',
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.5,
         },
         {
-            url: 'https://iov.kr/contact',
+            url: 'https://www.iovstudio.kr/contact',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.5,

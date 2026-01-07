@@ -62,7 +62,6 @@ body {
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .glass-card {
@@ -285,11 +284,12 @@ body {
   .s4 .cont .txt > p br{display: none;}
 }
 @media screen and (max-width:1024px) {
-  .s4 .cont.pc{display: none;}
-  .s4 .cont.mo{display: block; height: auto; font-size: 1px;}
-  .s4 .cont .txt{position: unset; opacity: 1; font-size: 0.5px;}
-  .s4 .cont .txt .logo{margin: 0 auto; width: 140px; height: 40px;}
-  .s4 .cont .txt > p{font-size: 18px;}
+  /* PC 레이아웃을 모바일에서도 그대로 노출 (모바일 전용 .cont.mo 는 사용하지 않음) */
+  .s4 .cont.pc{display: flex;}
+  .s4 .cont.mo{display: none;}
+  .s4 .cont .txt{position: unset; opacity: 1; font-size: 0.7px;}
+  .s4 .cont .txt .logo{margin: 0 auto 12px; width: 120px; height: 36px;}
+  .s4 .cont .txt > p{font-size: 16px;}
   .s4 .cont .txt > p br{display: block;}
   .s4 .cont .txt .bottom .row .flexBx{justify-content: center; flex-wrap: wrap;}
   .s4 .cont .txt .bottom .row .flexBx > div.minWidth{min-width: unset;}
